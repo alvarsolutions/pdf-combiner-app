@@ -1,9 +1,13 @@
 {
-  "name": "file-conversion-app",
+  "name": "pdf-combiner-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "main": "electron/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvarsolutions/pdf-combiner-app.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -24,7 +28,8 @@
     ],
     "mac": {
       "target": "dmg",
-      "hardenedRuntime": true
+      "hardenedRuntime": true,
+      "icon": "public/icon.png"
     },
     "win": {
       "target": "nsis"
@@ -35,8 +40,8 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "YOUR_GITHUB_USERNAME",
-        "repo": "YOUR_REPO_NAME"
+        "owner": "alvarsolutions",
+        "repo": "pdf-combiner-app"
       }
     ]
   },
