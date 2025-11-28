@@ -29,10 +29,11 @@
     "mac": {
       "target": "dmg",
       "hardenedRuntime": true,
-      "icon": "public/icon.png"
+      "icon": "build/icon.icns"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "build/icon.ico"
     },
     "linux": {
       "target": "AppImage"
