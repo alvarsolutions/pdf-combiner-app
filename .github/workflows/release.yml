@@ -27,7 +27,7 @@ jobs:
         run: npm ci
       
       - name: Build application
-        run: npm run electron:build
+        run: npm run electron:build -- -c.publish=never
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -39,6 +39,7 @@ jobs:
           path: |
             release/*.dmg
             release/*.dmg.blockmap
+            release/latest-mac.yml
       
       - name: Upload Windows artifacts
         if: matrix.os == 'windows-latest'
@@ -48,6 +49,7 @@ jobs:
           path: |
             release/*.exe
             release/*.exe.blockmap
+            release/latest.yml
   
   publish:
     needs: release
@@ -75,8 +77,10 @@ jobs:
           files: |
             release/*.dmg
             release/*.dmg.blockmap
+            release/latest-mac.yml
             release/*.exe
             release/*.exe.blockmap
+            release/latest.yml
           generate_release_notes: true
           draft: false
           prerelease: false
