@@ -102,6 +102,10 @@ button {
 .app-header {
   text-align: center;
   margin-bottom: var(--space-2xl);
+  -webkit-app-region: drag;
+  /* Makes header draggable for Electron */
+  padding-top: var(--space-md);
+  /* Add padding for traffic lights on macOS */
 }
 
 .app-title {
@@ -113,11 +117,17 @@ button {
   margin-bottom: var(--space-sm);
   letter-spacing: -0.025em;
   text-shadow: 0 0 30px var(--accent-glow);
+  -webkit-app-region: no-drag;
+  /* Allow text selection */
+  user-select: text;
 }
 
 .app-subtitle {
   color: var(--text-secondary);
   font-size: 1.125rem;
+  -webkit-app-region: no-drag;
+  /* Allow text selection */
+  user-select: text;
 }
 
 .card {
