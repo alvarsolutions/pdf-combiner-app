@@ -19,7 +19,7 @@ def add_corners(image_path, output_path, radius):
 # Process the source icon
 # Standard iOS/macOS icon curvature is roughly 22% of the dimension
 # For a 1024x1024 icon, that's about 225px radius
-if os.path.exists('build/icon-source.png'):
-    add_corners('build/icon-source.png', 'build/icon-rounded.png', radius=225)
+if os.path.exists('public/pdf-combiner-icon.png'):
+    add_corners('public/pdf-combiner-icon.png', 'public/pdf-combiner-icon-rounded.png', radius=225)
 else:
     print("Source icon not found!")
