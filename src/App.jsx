@@ -78,6 +78,7 @@ function App() {
 
   return (
     <div className="container">
+      <div className="title-bar" />
       <Toaster position="top-center" theme="dark" />
       <header className="app-header">
         <h1 className="app-title">PDF Combiner</h1>
